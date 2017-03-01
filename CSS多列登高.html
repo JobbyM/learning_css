@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 多列等高</title>
+  <style>
+  .parents {
+    width: 600px;
+    border: 1px solid;
+    margin: 100px auto 0 auto;
+    text-align: center;
+  }
+  .top {
+    background: #cc00cc;
+    height: 100px;
+  }
+  .left {
+    background: #00cc00;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+  }
+  .content {
+    background: #cccccc;
+    float: left;
+    width: 400px;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+  }
+  .right {
+    background: #0000cc;
+    float: right;
+    width: 100px;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+  }
+  .foot {
+    background: #cccc00;
+    height: 100px;
+    clear: both;
+  }
+  .main {
+    overflow: hidden;
+  }
+  </style>
+</head>
+<body>
+<div class="parents">
+  <div class="top">这是Top</div>
+  <div class="main">
+    <div class="left">这是Left</div>
+    <div class="content">这是Content<br><br>这是Content<br><br><br><br>这是Content</div>
+    <div class="right">这是Right</div>
+  </div>
+  <div class="foot">这是Foot!</div>
+</div>
+</body>
+</html>
