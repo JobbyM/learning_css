@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS布局之双飞翼布局VS圣杯布局</title>
+  <style>
+  body {
+    min-width: 550px;
+  }
+  #container {
+    /*双飞翼布局不需要设置容器外边距*/
+    /*padding-left: 200px;
+    padding-right: 150px;*/
+  }
+  #container .column {
+    height: 200px;
+    /*双飞翼布局不需要相对定位*/
+    /*position: relative;*/
+    float: left;
+  }
+  #center {
+    background-color: #e9e9e9;
+    width: 100%;
+  }
+  #left {
+    background-color: red;
+    width: 200px;
+    margin-left: -100%;
+    /*双飞翼布局不需要相对定位*/
+    /*left: -200px;*/
+  }
+  #right {
+    background-color: blue;
+    width: 150px;
+    margin-left: -150px;
+    /*双飞翼布局不需要相对定位*/
+    /*right: -150px;*/
+  }
+  #footer {
+    clear: both;
+  }
+  #header, #footer {
+    background-color: #c9c9c9;
+  }
+  /*双飞翼布局新增的部分*/
+  #innerCenter {
+    margin-left: 200px;
+    margin-right: 150px;
+  }
+  </style>
+</head>
+<body>
+<div id="header">header</div>
+<div id="container">
+  <div id="center" class="column">
+     /*双飞翼布局新增的部分*/
+    <div id="innerCenter">center</div>
+  </div>
+  <div id="left" class="column">left</div>
+  <div id="right" class="column">right</div>
+</div>
+<div id="footer">footer</div>
+</body>
+</html>
